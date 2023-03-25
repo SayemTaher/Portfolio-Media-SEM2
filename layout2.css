@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:whitesmoke;
+    cursor: pointer;
+
+}
+li{
+    list-style: none;
+}
+body{
+     width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(109,109,110,1) 50%);
+}
+nav ul{
+    display:flex;
+    gap:3rem;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-right: 5rem;
+}
+nav ul li{
+    border:1px solid white;
+    border-radius: 0.7rem;
+    padding: 0.5rem 1.5rem;
+    color:white
+    
+}
+header > span{
+    display: none;
+}
+.index-paragraph{
+    display: flex;
+    flex-direction: column;
+    padding-left: 7rem;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    color:grey;
+}
+.index-word h1:nth-child(1){
+    display: none;
+}
+.index-word > h1{
+    text-align: center;
+    background: rgb(109,109,110);
+    background: linear-gradient(90deg, rgba(109,109,110,1) 50%, rgba(255,255,255,1) 50%);
+    background-size: 100%;
+    font-size: 15rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.index-intro{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 5rem;
+    font-size: 2rem;
+    color:rgb(204, 202, 202);
+}
+.index-section-one{
+    display: none;
+}
+.index-section-two{
+    display:none;
+}
+.box{
+    display:none;
+}
+
+
