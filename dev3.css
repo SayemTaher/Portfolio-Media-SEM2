@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:rgb(72, 72, 72);
+    cursor: pointer;
+    
+}
+header >span {
+    font-size: 1.5rem;
+    color:whitesmoke;
+    background-color: grey;
+    padding: 0rem 3rem;
+}
+li{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    gap: 5rem;
+    padding-right: 3rem;
+}
+nav ul li a{
+    font-size: 1.5rem;
+}
+nav ul li a:hover{
+    color:black;
+}
+.container-index{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(252,252,252);
+    background: linear-gradient(90deg, rgba(252,252,252,1) 17%, rgba(245,245,245,1) 22%, rgba(109,109,110,1) 51%);
+    display: Flex;
+    padding-top: 10rem;
+    padding-left: 15rem;
+
+}
+.index-paragraph{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    text-align: right;
+
+    z-index: 2;
+}
+.index-paragraph > span{
+    z-index: 100;
+    color: rgb(111, 109, 109);
+    
+}
+.index-word{
+    z-index: 1;
+}
+.index-word h1{
+    margin-left: -5rem;
+    font-size: 30rem;
+    color:rgb(82, 82, 82);
+}
+.index-word h1:nth-child(2){
+    display:none;
+}
+.index-intro{
+    display: none;
+}
+.index-section-one{
+    display: none;
+}
+.index-section-two{
+    display:none;
+}
+.box{
+    display:none;
+}
+
+
+@font-face {
+    font-family: arial ;
+    src: url();
+}

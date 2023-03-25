@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: avenir;
+}
+ /* video#bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: -10;
+        transform: translateX(-50%) translateY(-50%);
+      } */
+html {
+  scroll-behavior: smooth;
+}
+link[rel="icon"] {
+  border-radius: 50%;
+}
+
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: avenir;
+  src:url(/my-portfolio/webfontkit-20230210-154158/avenirltstd-roman-webfont.woff2);
+  
+}
+:root {
+  --bg-color: rgb(251, 249, 249);
+  --header-color: rgb(5, 5, 28);
+  --text-color: rgb(96, 96, 96);
+  --title-color: orangered;
+
+}
+header{
+  display: flex;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+
+}
+nav ul {
+  display: flex;
+  gap:2rem;
+  flex-wrap: wrap;
+}
+nav ul li a{
+  color:rgb(70, 70, 70);
+}
+.cart > a >button{
+  border: none;
+  padding: 0.5rem;
+  width: 4rem;
+  background-color: rgb(161, 159, 159);
+  border-radius: 0.9rem;
+  cursor:pointer;
+}
+.cart > a >button:hover{
+  background-color:grey;
+}
+.logo > span{
+  font-size: 1.5rem;
+}
+.logo{
+  margin-left: -16rem;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(237,236,244);
+  background: linear-gradient(90deg, rgba(237,236,244,1) 0%, rgba(134,134,145,1) 100%);
+}
+.container span{
+  font-size: 4rem;
+  color:white;
+  font-weight: bold;
+}
+.container a button{
+  border:none;
+  padding: 0.5rem;
+  width: 9rem;
+  border-radius: 0.9rem;
+  cursor:pointer;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+  background: linear-gradient(90deg, rgb(205, 205, 205) 0%, rgba(134,134,145,1) 100%);
+}

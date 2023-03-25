@@ -1,0 +1,1835 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: avenir;
+}
+ /* video#bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: -10;
+        transform: translateX(-50%) translateY(-50%);
+      } */
+html {
+  scroll-behavior: smooth;
+}
+link[rel="icon"] {
+  border-radius: 50%;
+}
+button{
+  transform: scale(0.98);
+}
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("/avenirltstd-roman-webfont.woff");
+}
+@font-face {
+  font-family: AvenirBold;
+  src:url("/avenirltstd-black-webfont.woff2");
+}
+:root {
+  --bg-color: rgb(251, 249, 249);
+  --header-color: rgb(5, 5, 28);
+  --text-color: rgb(96, 96, 96);
+  --title-color: orangered;
+
+}
+.container-index{
+  display: flex;
+  flex-direction: column;
+}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 84px;
+  background-color: rgb(251, 251, 251);
+  z-index: 10;
+  transform: translateZ(20ch);
+  justify-content: space-between;
+}
+header nav {
+  margin-left: 34px;
+  margin-top: -30px;
+}
+header h3 {
+
+  font-style: normal;
+  -webkit-font-smoothing:antialiased;
+  font-family: AvenirBold;
+
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  color: var(--header-color);
+  padding: 1.5rem;
+  margin-top: 0px;
+}
+header >a>img {
+  width: 105px;
+  height: 50px;
+  position: relative;
+  margin: 1rem;
+  
+}
+header h4 {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: var(--title-color);
+  position: relative;
+}
+header > img{
+  height: 3rem;
+  width:7rem;
+  object-fit: cover;
+  margin-left: 3rem;
+  position: relative;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title{
+  font-family: AvenirBold;
+}
+.header-right > h3 {
+  background-image: linear-gradient(
+    -225deg,
+    rgb(5,5,28) 50%,
+    /* #08b06d 29%,
+    #ff1361 67%, */
+    orangered 100%
+  );
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 1;
+}
+/* CSS for footer */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+footer > p {
+  color: grey;
+  font-weight: bold;
+}
+
+.social-icon {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.social-icon > span {
+  color: grey;
+  font-weight: bold;
+}
+.icons {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.icons > a > .fa-github {
+  font-size: 2rem;
+  color: grey;
+  cursor: pointer;
+}
+.fa-instagram {
+  font-size: 2rem;
+  color: grey;
+  cursor: pointer;
+}
+.fa-linkedin {
+  font-size: 2rem;
+  color: grey;
+  cursor: pointer;
+}
+.sitemap{
+    display: flex;
+    gap:3rem;
+    background-color: #ffffff;
+}
+
+.site-part-one{
+    display: flex;
+    flex-direction: column;
+    
+}
+.sitemap a{
+    text-decoration-color: grey;
+    color:grey;
+}
+.sitemap a:hover{
+    color:var(--title-color);
+}
+.site-part-two{
+    display: flex;
+    flex-direction: column;
+    /* text-decoration: none; */
+}
+.sitemap h4{
+    padding-bottom: 1rem;
+    text-align: left;
+    font-family: AvenirBold;
+}
+.social-icon > p {
+  background-image: linear-gradient(
+    -225deg,
+    #08031a 50%,
+    /* #08b06d 29%,
+    #ff1361 67%, */
+    #ff5100 100%
+  );
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  font-family: AvenirBold;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+footer > p {
+  font-size: 1rem;
+}
+
+/* hamburgermenu */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  margin-right: 2rem;
+  z-index: 100;
+
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #161123;
+}
+
+#menuToggle a:hover {
+  color: #906b6b;
+}
+
+#menuToggle input {
+  position: absolute;
+  top: 17px;
+  color: #161123;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 200;
+  min-height: 34px;
+  min-width: 34px;
+}
+#menuToggle span {
+  display: block;
+  top: 17px;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: var(--title-color);
+
+  border-radius: 3px;
+
+  z-index: 100;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: var(--title-color);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg);
+}
+
+#menu {
+  position: absolute;
+  top: 170px;
+  width: 220px;
+  margin: -100px 0 0 -150px;
+  padding-left: 4rem;
+  padding-top: 24px;
+  cursor: pointer;
+  padding-bottom: 30px;
+  font-family: AvenirBold;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: #ffffffea;
+  list-style-type: none;
+  z-index: 100;
+  transition: 0.5s;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+}
+
+#menu li {
+  padding: 12px;
+ font-family: AvenirBold;
+  width: 150px;
+  color: #79768e;
+  transition: 0.3s;
+}
+#menu #category {
+  color: #161123;
+  padding: 12px;
+  padding-top: 18px;
+  padding-left: 4px;
+  font-size: 17px;
+  width: 100px;
+  transition: 0.3s;
+  z-index: 100;
+}
+#menu #category:hover {
+  color: var(--title-color);
+}
+#menu li:hover {
+  color: #161123;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+/* CSS for index page starts here */
+
+.part-one {
+  display: flex;
+  background-color:var(--header-color);
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 5px solid var(--title-color);
+}
+
+.part-one > .title {
+  color: var(--bg-color);
+  font-weight: bold;
+  font-size: 3rem;
+  width: 26.5ch;
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid var(--title-color);
+  animation: cursor 1s step-start infinite, text 3s steps(20) normal;
+}
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: var(--title-color);
+  }
+}
+
+@keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30.5ch;
+  }
+}
+
+.part-two {
+  display: flex;
+  background-color: var(--bg-color);
+  /* justify-content: center; */
+  padding-bottom: 10rem;
+  flex-direction: column;
+  flex-direction: column;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
+}
+.my-links{
+    display: flex;
+    gap:2rem;
+    
+}
+.my-profile-img {
+  width: 10rem;
+  margin-top: -130px;
+}
+.my-profile-img img {
+  border-radius: 50%;
+  width: 11rem;
+  border: 4px solid var(--title-color);
+}
+.my-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-me{
+    display: flex;
+    padding-left: 5rem;
+    padding-top: 2rem;
+}
+.my-links{
+    display: flex;
+    padding-top: 2rem;
+    gap: 2rem;
+    padding-right: 3rem;
+}
+.my-links > a >button{
+    border:1px solid rgb(182, 177, 177);
+    padding: 0.5rem 2rem;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    color: grey;
+    border-radius: 0.2rem;
+}
+
+.my-links > a >button:hover{
+    color:var(--title-color);
+    transform: scale(0.98);
+}
+.fa-user{
+    padding-right: 10px;
+    font-size:15px;
+    
+}
+.fa-image{
+    padding-right: 10px;
+    font-size:15px;
+}
+
+.my-story > h4 {
+  padding-top: 1rem;
+}
+.my-story h1,
+h2,
+h3 {
+  margin-left: 1.5rem;
+  margin-top: 5px;
+  font-family: AvenirBold;
+}
+/* .my-story h2,h3{
+    text-align: center;
+} */
+.my-story h4 {
+  font-weight: bold;
+  color: rgb(155, 148, 148);
+  font-size: 1.4rem;
+}
+.my-story h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.my-story h2 {
+  font-size: 1.6rem;
+  color: var(--title-color);
+}
+.my-story h3 {
+  font-weight: 1.4rem;
+  font-weight: bold;
+}
+.my-story-title {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+.my-story-title h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-family: AvenirBold;
+}
+.my-story-title h1 > span {
+  font-size: 4rem;
+  font-family: AvenirBold;
+  color: var(--title-color);
+}
+.fa-arrow-down {
+  padding-top: 3rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--title-color);
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-direction: normal;
+  z-index: 5;
+  position: relative;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  from {
+    color: var(--title-color);
+    transform: translate(0rem, 0rem);
+  }
+  to {
+    transform: translate(0rem, 3rem);
+  }
+}
+/* CSS for introduction section - index */
+/* ------------------------------ */
+/* ------------------------------ */
+.introduction{
+  padding-top: 5rem ;
+  padding-bottom: 5rem;
+}
+.intro-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.intro-info > p{
+  max-width: 600px;
+  text-align: justify;
+  color: grey;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  transition: 1s;
+}
+/* .intro-info h1{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+} */
+.intro-info > h1 {
+  background-image: linear-gradient(
+    -225deg,
+    #08031a 30%,
+    orangered 30%,
+    #08031a 100%
+  );
+  font-family: AvenirBold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  font-weight: bold;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  transition: 0.2s;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  
+}
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.intro-info > h1 > span{
+  color:var(--title-color);
+}
+
+
+/* CSS for img carrousel - index  */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+a{
+
+    text-decoration: none;
+}
+
+
+
+.img-carrousel > input {
+
+    display: none;
+}
+
+
+
+
+.img-carrousel {
+    max-width: 600px;
+    height: 600px;
+    display: flex;
+    padding-top: 5rem;
+    padding-right: 6rem;
+    transform-style: preserve-3d;
+    
+}
+#slide1,#slide2,#slide3,#slide4,#slide5{
+    border-radius: 10px;
+}
+
+
+.cards {
+
+    position: relative;
+    height: 500px;
+    width: 330px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.cards label {
+
+    position: absolute;
+    width: 330px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.cards .card{
+
+    position: relative;
+    height: 30rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.image > img{
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow:  10px 10px 30px rgba(0, 0, 0, 50%);
+  object-fit: cover;
+}
+.image > img:hover{
+  transform:scale(0.98);
+}
+
+.card .infos{
+    text-align: center;
+}
+
+.infos span{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.infos .name{
+    font-size:1.2rem;
+    color: var(--header-color);
+    font-family: AvenirBold;
+    transition: all .6s ease;
+    font-weight: bold;
+}
+
+.infos .lorem{
+    font-size: 16px;
+    color:grey;
+}
+
+.card >a >button{
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    background-color: var(--title-color);
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    transition: all .7s ease;
+}
+.card > a > button:hover{
+  background-color: var(--header-color);
+  transition: 0.3s;
+  transform: scale(0.98);
+}
+
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5 {
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #ECEAED;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+/* CSS for development page starts here */
+/* --------------()------------------ */
+/* --------------()------------------ */
+
+.intro-dev{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  z-index: 1;
+  background-color: var(--header-color);
+  width: 100%;
+  color:whitesmoke;
+}
+.intro-icons{
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  
+}
+.fa-gear:nth-child(1){
+  font-size: 10rem;
+  font-weight: bold;
+  color:rgb(221, 221, 221);
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+.fa-gear:nth-child(2){
+  font-size: 15rem;
+  font-weight: bold;
+  color:rgb(221, 221, 221);
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.intro-title h1{
+  font-size: 7rem;
+  font-family: AvenirBold;
+  color:rgb(233, 230, 230);
+}
+.intro-title{
+  display: flex;
+  align-items: center;
+  /* margin-top: 10rem; */
+  gap:1rem;
+}
+.fa-wrench{
+  font-size: 6rem;
+  color:var(--title-color);
+}
+.des-dev{
+  display:flex;
+  flex-direction: column;
+  padding:3rem 4rem;
+  flex-wrap: wrap;
+}
+.des-dev h1{
+  font-size: 3rem;
+  font-family: AvenirBold;
+  color:var(--title-color)
+}
+.des-dev p{
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  color:var(--text-color);
+}
+.des-dev > .intro-explained{
+  padding-top: 1rem;
+}
+.challenge-one{
+  display:flex;
+  padding:4rem 4rem;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+
+}
+
+.challenge-one-image img{
+  max-width: 100%;
+  
+}
+.challenge-one-description p{
+  padding-top: 2rem;
+  text-align: justify;
+  word-wrap:normal;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  text-align: justify;
+}
+.learning-outcome{
+  padding-top: 1rem;
+}
+.challenge-one-description h1{
+  font-size:2rem;
+  font-family: AvenirBold;
+  color:var(--title-color)
+}
+.challenge-one-description h1 span{
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.challenge-one-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+.challenge-one-description h1 span a{
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.challenge-buttons{
+  padding-top: 2rem;
+  display: flex;
+  gap:3rem;
+  flex-wrap: wrap;
+}
+.challenge-buttons a button{
+  padding: 0.5rem 1rem;
+  color:whitesmoke;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--header-color);
+  border-radius: 0.4rem;
+}
+.challenge-buttons a button:hover{
+  transform: scale(0.98);
+
+  background-color: var(--title-color);
+}
+.fa-link{
+ 
+  color:whitesmoke
+}
+.fa-github{
+
+  color: whitesmoke;
+}
+/* Here goes CSS for Development Challenge 2 */
+.dev-challenge-two{
+  display: flex;
+  gap:4rem;
+  justify-content:center;
+  align-items: center;
+  padding: 4rem 4rem;
+}
+.challenge-two-det{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.challenge-two-det img{
+  max-width: 100%;
+}
+.challenge-two-buttons{
+  padding-top: 2rem;
+  display: flex;
+  gap:3rem;
+  flex-wrap: wrap;
+}
+.challenge-two-buttons a button{
+  padding: 0.5rem 1rem;
+  color:whitesmoke;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--header-color);
+  border-radius: 0.4rem;
+}
+.challenge-two-buttons a button:hover{
+  transform: scale(0.98);
+  background-color: var(--title-color);
+}
+.challenge-two-des p{
+  padding-top: 2rem;
+  text-align: justify;
+  word-wrap:normal;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  text-align: justify;
+}
+.learning-outcome{
+  padding-top: 1rem;
+}
+.feedback{
+  padding-top: 1rem;
+}
+.challenge-two-des h1{
+  font-size:2rem;
+  font-family: AvenirBold;
+  color:var(--title-color)
+}
+.challenge-two-des h1 span{
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.challenge-two-des h1 span a{
+  color:var(--header-color);
+}
+/* Here starts CSS for Deevelopment challenge 3 */
+.dev-challenge-three{
+  display: flex;
+  flex-direction:column ;
+  padding: 4rem 4rem;
+  flex-wrap: wrap;
+  text-align: justify;
+  background-color: rgb(238, 238, 238);
+}
+.challenge-three-des p{
+  padding-top: 2rem;
+  text-align: justify;
+  word-wrap:normal;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  text-align: justify;
+}
+.learning-outcome{
+  padding-top: 1rem;
+}
+.feedback{
+  padding-top: 1rem;
+}
+.challenge-three-des h1{
+  font-size:2rem;
+  font-family: AvenirBold;
+  color:var(--title-color)
+}
+.challenge-three-des h1 span{
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.challenge-three-des h1 span a{
+  color:var(--header-color);
+}
+.challenge-three-des{
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+.challenge-three-buttons{
+  padding-top: 2rem;
+  display: flex;
+  gap:3rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.challenge-three-buttons a button{
+  padding: 0.5rem 1rem;
+  color:whitesmoke;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--header-color);
+  border-radius: 0.4rem;
+}
+.challenge-three-disc{
+  display: flex;
+  gap:3rem;
+  /* justify-content: space-around; */
+
+}
+
+.challenge-three-buttons a button:hover{
+  transform: scale(0.98);
+  background-color: var(--title-color);
+}
+.challenge-three-images{
+ display: flex;
+flex-wrap: wrap;
+gap:1rem;
+justify-content: center;
+align-items: center;
+padding: 2rem 0rem;
+}
+.first-layout img{
+  width: 30rem;
+}
+.second-layout img{
+  width: 30rem;
+}
+.third-layout img{
+  width: 30rem;
+}
+.fourth-layout img{
+  width: 30rem;
+}
+.next-or-back{
+  padding: 1rem 1rem;
+ background-color: var(--current-color1);
+}
+.page-movement{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.page-movement a button{
+  border:none;
+  padding: 0.2rem 2rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  font-family: AvenirBold;
+  color:var(--header-color);
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--current-color1);
+}
+.page-movement a button:hover{
+  color:var(--text-color);
+}
+.des-dev p span{
+  font-family: AvenirBold;
+}
+.challenge-one-description p span{
+  font-family: AvenirBold;
+}
+.learning-outcome span{
+  font-family: AvenirBold;
+}
+.challenge-two-des p span{
+  font-family: AvenirBold;
+}
+.chall-three-des-det p span{
+  font-family: AvenirBold;
+}
+.feedback span{
+  font-family: AvenirBold;
+}
+/* CSSfor Media production goes here */
+.media-intro{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15rem 4rem;
+  background-color: var(--header-color);
+}
+.media-title-images{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:2rem;
+}
+.media-title-images img{
+  width:6rem;
+  object-fit: cover;
+}
+.media-title{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.media-title-header{
+  display: flex;
+  gap:1rem;
+}
+.media-intro-links{
+  display: flex;
+  gap:3rem;
+  margin-right: 2.5rem;
+}
+.media-intro-links a button{
+  border:1px solid rgb(182, 177, 177);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color:rgb(182, 177, 177);
+  background-color: var(--header-color);
+  font-size: 1.2rem;
+  width: 15rem;
+  font-family: AvenirBold;
+}
+.media-intro-links a button:hover{
+  background-color:var(--current-color1);
+  color:rgb(221, 221, 221);
+  border:1px solid rgb(221, 221, 221)
+}
+.media-title-header h1{
+  font-size: 5rem;
+  color:whitesmoke;
+  font-family: AvenirBold;
+}
+.fa-photo-film{
+  font-size: 5rem;
+  color:var(--title-color);
+}
+.fa-camera{
+  font-size: 10rem;
+  color:rgb(180, 180, 180);
+ 
+}
+.fa-image{
+  font-size: 1.2rem;
+}
+
+.media-intro-des{
+  display:flex;
+  padding:4rem 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: justify;
+  background-color: rgb(245, 245, 245);
+}
+.media-intro-explained h1{
+  font-size: 3rem;
+  font-family: AvenirBold;
+  color:var(--header-color);
+  padding-bottom: 2rem;
+}
+.media-intro-explained p{
+  color:grey;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.media-intro-explained p span{
+  font-family: AvenirBold;
+}
+.media-objectives{
+  padding-top: 2rem;
+}
+.logos{
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+  justify-content: center;
+  background-color: rgb(251, 249, 249);
+  text-align: justify;
+  padding: 4rem 4rem;
+}
+.logo-task{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.logo-task-header{
+  display: flex;
+  justify-content: space-between;
+
+}
+.logo-task-header h1{
+  font-size: 3rem;
+  font-family: AvenirBold;
+  color:var(--header-color)
+}
+.logo-task-header h1 span{
+  color:var(--title-color);
+  font-family: AvenirBold;
+}
+.logo-task-header img{
+  width: 5rem;
+}
+.logo-task-description p{
+  font-size: 1.5rem;
+  text-align: justify;
+  color:grey;
+}
+.logo-task-description p span{
+  font-family: AvenirBold;
+}
+.logo-iteration{
+  display: flex;
+  
+  justify-content:space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.logo-iteration img{
+  width:20%;
+  object-fit: cover;
+}
+.logo-learning-outcomes{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  text-align: justify;
+
+}
+.logo-feedback p{
+  font-size: 1.5rem;
+  text-align: justify;
+  color:grey
+}
+.logo-feedback p span{
+  font-family: AvenirBold;
+}
+.logo-outcomes p{
+  font-size: 1.5rem;
+  text-align: justify;
+  color:grey;
+}
+.logo-outcomes p span{
+  font-family: AvenirBold;
+}
+/* Here goes CSS for User Centered Design */
+/* -----------##------------- */
+/* -----------##------------- */
+/* -----------##------------- */
+ 
+.ucd-landing-page{
+  padding: 15rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--header-color);
+}
+.ucd-title{
+  display:flex;
+  gap:2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ucd-title > .fa-pen-nib{
+  font-size: 5rem;
+  color:var(--title-color)
+}
+.ucd-title h1{
+  font-size: 4rem;
+  color:whitesmoke;
+  font-family: AvenirBold;
+}
+.ucd-icons{
+  display:flex;
+  gap:4rem;
+}
+.ucd-icons img{
+  width: 8rem;
+  object-fit: cover;
+}
+.ucd-intro{
+  display: flex;
+  padding: 4rem 4rem;
+  flex-direction: column;
+}
+.ucd-intro h1{
+  font-size: 3.5rem;
+  color:var(--header-color);
+}
+.ucd-intro p{
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  text-align: justify;
+  color:var(--text-color);
+}
+.ucd-intro p span{
+  font-family: AvenirBold;
+}
+.ucd-intro > .ucd-development{
+  padding-top: 1rem;
+}
+.ucd-challenge-one{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4rem;
+  background-color: rgb(234, 234, 234);
+}
+.ucd-challenge-one h1{
+  font-size: 3rem;
+  color:var(--header-color);
+  font-family:AvenirBold;
+}
+.ucd-challenge-one h1 span{
+  font-family: AvenirBold;
+  color:var(--title-color);
+}
+.my-objective-ucd h1{
+  font-size: 2rem;
+  padding-top: 2rem;
+  color:var(--header-color);
+  font-family:AvenirBold;
+}
+.my-objective-ucd p{
+  text-align: justify;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  color:var(--text-color);
+}
+.ucd-task-one-des{
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: center;
+}
+.ucd-task-one-explained p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  padding-top: 2rem;
+}
+.ucd-task-one-explained p span{
+  font-family: AvenirBold;
+}
+.ucd-task-one-explained h1{
+  font-size: 2rem;
+  padding-top: 2rem;
+  color: var(--title-color);
+  font-family: AvenirBold;
+}
+.ucd-task-one-images{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+.airbnb{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.airbnb p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.airbnb p span{
+  font-family: AvenirBold;
+}
+
+.apple{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.apple p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.apple p span{
+  font-family: AvenirBold;
+}
+.amazon{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.amazon p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.amazon p span{
+  font-family: AvenirBold;
+}
+.usps{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.usps p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.usps p span{
+  font-family: AvenirBold;
+}
+.linkedIn{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.linkedIn p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.linkedIn p span{
+  font-family: AvenirBold;
+}
+.yahoo{
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content:center;
+  align-items: center;
+  gap:3rem;
+}
+.yahoo p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+}
+.yahoo p span{
+  font-family: AvenirBold;
+}
+
+.ucd-task-one-part-two-details h1{
+  font-size: 2rem;
+  color: var(--title-color);
+  font-family: AvenirBold;
+  padding:2rem 0rem;
+  
+}
+.ucd-task-one-images img{
+  width: 30%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+.ucd-task-one-part-two{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ucd-task-one-part-two-images{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.ucd-task-one-part-two-images img{
+  width: 30%;
+  object-fit: cover;
+  border-radius:0.3rem;
+}
+.ucd-task-one-learning-outcomes p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  padding-top: 2rem;
+}
+.ucd-task-one-learning-outcomes p span{
+  font-family: AvenirBold;
+}
+/* task two ucd */
+.ucd-task-two{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4rem;
+  background-color: rgb(251, 249, 249);
+}
+.ucd-task-two-des p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  padding-top: 2rem;
+}
+.ucd-task-two-des h1{
+  font-size: 3rem;
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.ucd-task-two-des h1 span{
+  font-family: AvenirBold;
+  color:var(--title-color)
+}
+.ucd-task-two-des p span{
+  font-family: AvenirBold;
+}
+.ucd-task-two-seg{
+  display: flex;
+  gap:3rem;
+  align-items: center;
+  text-align: justify;
+  padding-bottom: 5rem;
+}
+.ucd-task-two-seg p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  padding-top: 2rem;
+
+}
+.ucd-task-two-seg p span{
+  font-family: AVenirBold;
+}
+.ucd-task-two-seg img{
+  width:30%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+.ucd-learning-outcome-two{
+  padding-top: 1rem;
+}
+.ucd-learning-outcome-two p{
+  text-align: justify;
+  font-size: 1.5rem;
+  color:var(--text-color);
+  padding-top: 2rem;
+}
+.ucd-learning-outcome-two p span{
+  font-family: AVenirBold;
+}
+/* UCD TASK THREE */
+
+.ucd-challenge-three{
+  display:flex;
+  flex-direction: column;
+  padding: 4rem 4rem;
+  background-color: rgb(250, 253, 255);
+  text-align: justify;
+  justify-content: center;
+}
+.ucd-challenge-three a{
+  text-decoration: none;
+  color:var(--title-color);
+}
+.ucd-challenge-three span{
+  font-family: AvenirBold;
+}
+.ucd-challenge-three img{
+  max-width: 30%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+.ucd-challenge-three p{
+  color:var(--text-color);
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.challenge-three-header h1{
+  font-size: 3rem;
+  color:var(--header-color);
+  font-family: AvenirBold;
+}
+.challenge-three-header h1 span{
+  font-family: AvenirBold;
+  color:var(--title-color);
+}
+.challenge-three-header p{
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.least-effort-and-beauty{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.magical-and-perpetual{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.identity{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.focus-attention{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.mistakes{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.emotional-contagion{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.socialization{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.challenge-three-lo{
+  padding-top: 3rem;
+}
+/* CSS for project starts here */
+/* -------dang dang----------- */
+
+.project-container h1{
+  font-family: AvenirBold;
+  font-size: 3rem;
+  color:var(--header-color);
+}
+.project-container p{
+  font-size: 1.5rem;
+  color:var(--text-color);
+  text-align: justify;
+}
+.project-container p span{
+  font-family: AvenirBold;
+}
+.project-info{
+  display:flex;
+  background-color: var(--header-color);
+  align-items: center;
+  padding: 15rem 4rem;
+  justify-content: space-between;
+}
+.project-header{
+  display: flex;
+  flex-direction: column;
+}
+.header-section{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+.fa-diagram-project{
+  font-size: 5rem;
+  color:var(--title-color);
+}
+.header-section h1{
+  font-size: 5rem;
+  color:rgb(251, 251, 251);
+  font-family: AvenirBold;
+}
+.project-header-image{
+  display: flex;
+  gap:3rem;
+}
+.project-header-image img{
+  width:10rem;
+  object-fit: cover;
+}
+.header-git-repo{
+  padding-top: 2rem;
+}
+.header-git-repo a button{
+  margin-left: 8rem;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid rgb(182, 177, 177);
+  color:rgb(182, 177, 177);
+  font-size: 1.1rem;
+  font-family: AvenirBold;
+  background-color: var(--header-color);
+  border-radius: 0.4rem;
+  width:300px;
+  cursor:pointer;
+  
+}
+.header-git-repo a button:hover{
+  color:rgb(251, 249, 249);
+  border: 1px solid rgb(251, 249, 249);
+}
+.project-intro{
+  padding: 4rem 4rem;
+  background-color: rgb(251, 249, 249);
+}
+.project-intro p{
+  padding-top: 2rem;
+}
+.project-intro-overview{
+  padding-top: 2rem;
+}
+.project-description{
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 4rem;
+  background-color: rgb(247, 247, 247);
+}
+.step-one{
+  display: flex;
+  gap:3rem;
+  padding-top:4rem;
+  align-items: center;
+  justify-content: center;
+}
+.step-one-intro p{
+  padding-top: 2rem;
+}
+.step-one-images img{
+  width:100%;
+  border-radius: 0.3rem;
+}
+.step-one-intro a button{
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border: none; 
+  color:rgb(251, 249, 249);
+  font-size: 15px;
+  font-family: AvenirBold;
+  background-color: var(--header-color);
+  border-radius: 0.4rem;
+  cursor:pointer;
+
+}
+.step-one-intro a button:hover{
+  background-color:var(--title-color);
+}
+.step-one-intro p{
+  padding-bottom: 2rem;
+}
+.step-one-intro h1 span{
+  font-family: AvenirBold;
+  color:var(--title-color);
+}
+
+/* CSS for mobile */
+.important-update{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+.important-update h1{
+  color:var(--text-color);
+  font-family: AvenirBold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.important-update a button{
+  font-size: 1.1rem;
+  border:none;
+  background-color: var(--header-color);
+  padding: 0.5rem 1rem;
+  color:rgb(251, 249, 249);
+  font-family: AvenirBold;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width:200px;
+}
+.important-update  a button:hover{
+  background-color: var(--title-color);
+}
+
+
+
+
+
+
+
