@@ -1,0 +1,154 @@
+body {
+  font-family: Avenir;
+  background-color: #f4f4f4;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("/avenirltstd-black-webfont.woff2");
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  /* background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%); */
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+  padding:0.5rem 1rem ;
+  color:rgb(8, 8, 35);
+}
+.upcoming h2{
+  padding-bottom: 2rem;
+  color:grey;
+  font-size: 2rem;
+}
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  margin-bottom: 5rem;
+  background-color: #dadada;
+  border-radius: 0.5rem;
+  padding:2rem ;
+  color:white;
+}
+
+form label {
+  width: 70px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+form input[type="text"],input[type="date"],input[type="time"] {
+  /* flex: 1; */
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border:none;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  font-size: 15px;
+}
+form input[type="text"]{
+  margin-left: 3.3rem;
+}
+form select{
+  padding: 10px;
+  width: 220px;
+  height: 40px;
+  border: none;
+  margin-left: 1.2rem;
+  border-radius: 0.5rem;
+}
+form label{
+  font-size: 1.5rem;
+  color:rgb(3, 3, 27);
+}
+form select {
+  padding: 5px;
+}
+
+form button {
+  border:none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  background-color: rgb(12, 138, 12);
+  color:white;
+  font-family: Avenir;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+form button:hover{
+  background-color: rgb(1, 120, 1);
+}
+
+#todo-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-card {
+  width: 370px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.task-card .task-name {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.task-card .date-time {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color:grey
+}
+
+.task-card .priority {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color:rgb(174, 174, 174);
+}
+
+.task-card .delete-button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.task-card .delete-button:hover{
+  background-color: #c81a0e;
+}
+.task-card.high-priority {
+  border-bottom: 5px solid red;
+}
+
+.task-card.medium-priority {
+  border-bottom: 5px solid rgb(244, 244, 2);
+}
+
+.task-card.normal-priority {
+  border-bottom: 5px solid green;
+}

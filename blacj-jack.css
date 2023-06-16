@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Avenir;
+}
+@font-face {
+    font-family: Avenir;
+    src: url("/avenirltstd-roman-webfont.woff2");
+}
+@font-face {
+    font-family: AvenirBold;
+    src: url("/avenirltstd-black-webfont.woff2");
+}
+.black-jack{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    padding: 3rem;
+}
+.black-jack img{
+    width: 20rem;
+    padding-bottom: 3rem;
+}
+.black-jack h1{
+    font-size: 3.5rem;
+    color:yellowgreen;
+    font-family: AvenirBold;
+}
+.black-jack p{
+    font-size: 2.5rem;
+    color:rgb(52, 126, 183);
+    font-family: AvenirBold;
+    padding-bottom: 2rem;
+}
+.black-jack span{
+    color:grey;
+    font-size: 2.5rem;
+    font-family: AvenirBold;
+    padding-bottom: 2rem;
+}
+.black-jack h2{
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+.black-jack h3{
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+}
+.black-jack button{
+    border:none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    width: 200px;
+    color:whitesmoke;
+    background-color: rgb(205, 107, 50);
+    font-family: AvenirBold;
+    cursor: pointer;
+}
+.black-jack button:hover{
+    background-color: orange;
+}
